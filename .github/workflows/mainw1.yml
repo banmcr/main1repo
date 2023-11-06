@@ -23,6 +23,8 @@ jobs:
       run: echo ${{ vars.VAR1 }}
 
   reuse:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
     uses: banmcr/workflowrepo/.github/workflows/reusable-workflow.yml@main
     with:
       my_variable: ${{ vars.VAR1 }}
