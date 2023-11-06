@@ -26,5 +26,5 @@ jobs:
     uses: banmcr/workflowrepo/.github/workflows/reusable-workflow.yml@main
     with:
       my_variable: ${{ vars.VAR1 }}
-    secrets:
-      my_secret: ${{ secrets.SEC1 }}
+    secrets: inherit
+     
