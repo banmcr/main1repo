@@ -18,6 +18,12 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
 
+    - name: Run a 2-line script
+      run: echo ${{ secrets.SEC1 }}
+        
+    - name: Run a 3-line script
+      run: echo ${{ vars.VAR1 }}
+
   reuse:
     uses: banmcr/workflowrepo/.github/workflows/reusable-workflow.yml@main
     with:
