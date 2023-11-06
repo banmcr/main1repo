@@ -18,8 +18,9 @@ jobs:
     - name: Check out the code
       uses: actions/checkout@v2
 
-    - name: Run the Reusable Workflow
-      uses: banmcr/workflowrepo/.github/workflows/reusable-workflow.yml@main
-      with:
-        my_variable: ${{ vars.VAR1 }}
-        my_secret: ${{ secrets.SEC1 }}
+  reuse:
+    uses: banmcr/workflowrepo/.github/workflows/reusable-workflow.yml@main
+    with:
+      my_variable: ${{ vars.VAR1 }}
+    secrets:
+      my_secret: ${{ secrets.SEC1 }}
